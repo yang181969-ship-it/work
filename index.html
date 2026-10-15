@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="no-js">
+<html lang="en-GB" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>格物 Studio — 编程接单 · 建站 · 技术写作</title>
-<meta name="description" content="格物 Studio：独立开发者 Yang 的个人接单页，提供网站开发、脚本 / 小工具编程与技术文档写作服务。按项目合作，一人对接到底。">
+<title>Gewu Studio — Freelance Development · Websites · Technical Writing</title>
+<meta name="description" content="Gewu Studio: the freelance page of independent developer Yang — website development, scripts and small tools, and technical writing. Project-based, with one point of contact from start to finish.">
 <meta name="author" content="Yang">
 <meta name="theme-color" content="#0F2038">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:title" content="格物 Studio — 编程接单 · 建站 · 技术写作">
-<meta property="og:description" content="网站开发、脚本 / 小工具编程、技术文档写作。按项目合作，一人对接到底。">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:title" content="Gewu Studio — Freelance Development · Websites · Technical Writing">
+<meta property="og:description" content="Website development, scripts and small tools, technical writing. Project-based, with one point of contact from start to finish.">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F2038'/%3E%3Cg transform='rotate(45 16 16)'%3E%3Crect x='8.5' y='8.5' width='15' height='15' fill='none' stroke='%23E8A33D' stroke-width='2'/%3E%3Crect x='12.5' y='12.5' width='7' height='7' fill='%23E8A33D'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +23,8 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "格物 Studio",
-  "description": "独立开发者 Yang 的个人接单页：网站开发、脚本 / 小工具编程、技术文档写作。",
+  "name": "Gewu Studio (格物 Studio)",
+  "description": "The freelance page of independent developer Yang: website development, scripts and small tools, and technical writing.",
   "email": "mailto:ethanxu643@gmail.com",
   "sameAs": ["https://yang181969.com"],
   "founder": { "@type": "Person", "name": "Yang", "url": "https://yang181969.com" }
@@ -64,15 +65,21 @@
   .logo .mark{width:13px;height:13px;border:1.5px solid var(--amber);transform:rotate(45deg);position:relative;transition:transform .4s ease;}
   .logo .mark::after{content:"";position:absolute;inset:3px;background:var(--amber);}
   .logo:hover .mark{transform:rotate(225deg);}
-  .header-right{display:flex;align-items:center;gap:34px;}
+  .header-right{display:flex;align-items:center;gap:28px;}
   nav{display:flex;gap:34px;}
-  nav a{color:var(--slate);text-decoration:none;font-size:0.9rem;transition:color .2s;position:relative;padding:4px 0;}
+  nav a{color:var(--slate);text-decoration:none;font-size:0.9rem;transition:color .2s;position:relative;padding:4px 0;white-space:nowrap;}
   nav a::after{content:"";position:absolute;left:0;bottom:-1px;width:100%;height:1px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .25s ease;}
   nav a:hover, nav a.active{color:var(--chalk);}
   nav a:hover::after, nav a.active::after{transform:scaleX(1);}
-  .nav-cta{font-family:'IBM Plex Mono',monospace;font-size:0.76rem;padding:8px 14px;border:1px solid var(--amber);color:var(--amber);text-decoration:none;white-space:nowrap;transition:background .2s, color .2s;}
+  .header-tools{display:flex;align-items:center;gap:12px;}
+  .lang-btn{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 11px;background:none;border:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:0.74rem;color:var(--slate-dim);cursor:pointer;transition:border-color .2s;}
+  .lang-btn:hover{border-color:var(--slate);}
+  .lang-btn .sep{opacity:0.6;}
+  .lang-btn [data-l]{transition:color .2s;}
+  html[lang^="en"] .lang-btn [data-l="en"], html[lang^="zh"] .lang-btn [data-l="zh"]{color:var(--amber);}
+  .nav-cta{font-family:'IBM Plex Mono',monospace;font-size:0.76rem;line-height:1.4;padding:8px 14px;border:1px solid var(--amber);color:var(--amber);text-decoration:none;white-space:nowrap;transition:background .2s, color .2s;}
   .nav-cta:hover{background:var(--amber);color:var(--ink);}
-  .menu-btn{display:none;width:40px;height:36px;background:none;border:1px solid var(--line);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;}
+  .menu-btn{display:none;width:40px;height:34px;background:none;border:1px solid var(--line);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;}
   .menu-btn span{display:block;width:16px;height:1.5px;background:var(--chalk);transition:transform .25s, opacity .25s;}
   .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
   .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0;}
@@ -89,10 +96,13 @@
   .hero-frame::after,.contact-frame::after{bottom:-5px;right:-5px;border-left:none;border-top:none;}
   .frame-label{position:absolute;top:-0.62rem;right:28px;padding:0 10px;background:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:0.66rem;line-height:1.2rem;letter-spacing:0.14em;color:var(--slate-dim);white-space:nowrap;}
   .hero h1{font-family:'Space Grotesk','Noto Sans SC',sans-serif;font-weight:600;font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.22;color:var(--paper);margin-bottom:22px;letter-spacing:-0.01em;}
-  .hero h1 .accent{color:var(--amber);font-style:italic;font-family:'Noto Sans SC',sans-serif;font-weight:400;position:relative;white-space:nowrap;}
-  .hero h1 .accent::after{content:"";position:absolute;left:0;right:0;bottom:0.02em;height:2px;background:var(--amber);opacity:0.45;transform:scaleX(0);transform-origin:left;animation:underline 0.9s 0.5s ease forwards;}
-  @keyframes underline{to{transform:scaleX(1);}}
+  html[lang^="en"] .hero h1{font-size:clamp(1.9rem,4.4vw,3.2rem);}
+  .hero h1 .accent{color:var(--amber);font-style:italic;font-family:'Noto Sans SC',sans-serif;font-weight:400;
+    background:linear-gradient(rgba(232,163,61,0.45),rgba(232,163,61,0.45)) no-repeat 0 96% / 0 2px;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone;animation:underline 0.9s 0.5s ease forwards;}
+  @keyframes underline{to{background-size:100% 2px;}}
   .hero p.lede{font-size:1.02rem;color:var(--slate);max-width:52ch;margin-bottom:34px;}
+  html[lang^="en"] .hero p.lede{max-width:60ch;}
   .hero p.lede strong{color:var(--chalk);font-weight:400;}
   .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
   .hero-meta{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:38px;padding-top:22px;border-top:1px dashed var(--line-soft);font-family:'IBM Plex Mono',monospace;font-size:0.74rem;color:var(--slate);list-style:none;}
@@ -118,9 +128,9 @@
   .service:hover{background:rgba(232,163,61,0.04);}
   .service:hover::before{width:100%;}
   .service .num{font-family:'IBM Plex Mono',monospace;color:var(--amber);font-size:0.82rem;padding-top:6px;}
-  .service h3{font-family:'Space Grotesk','Noto Sans SC',sans-serif;font-weight:600;font-size:1.22rem;color:var(--paper);transition:transform .25s ease;}
+  .service h3{font-family:'Space Grotesk','Noto Sans SC',sans-serif;font-weight:600;font-size:1.22rem;line-height:1.4;color:var(--paper);transition:transform .25s ease;}
   .service:hover h3{transform:translateX(4px);}
-  .service .en{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.14em;color:var(--slate-dim);margin-top:6px;}
+  .service .sub{font-family:'IBM Plex Mono','Noto Sans SC',monospace;font-size:0.68rem;letter-spacing:0.14em;color:var(--slate-dim);margin-top:6px;}
   .service p{color:var(--slate);font-size:0.93rem;max-width:56ch;}
   .service .tags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;}
   .service .tags span{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--slate);border:1px solid var(--line-soft);padding:3px 9px;}
@@ -130,7 +140,7 @@
   /* ---------- proof ---------- */
   .proof{padding:0 6vw 110px;}
   .proof-panel{border:1px solid var(--line);padding:min(5vw,44px);display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;background:var(--ink-2);}
-  .proof-panel h3{font-family:'Space Grotesk','Noto Sans SC',sans-serif;font-weight:600;font-size:1.3rem;color:var(--paper);margin-bottom:14px;}
+  .proof-panel h3{font-family:'Space Grotesk','Noto Sans SC',sans-serif;font-weight:600;font-size:1.3rem;line-height:1.45;color:var(--paper);margin-bottom:14px;}
   .proof-panel p{color:var(--slate);font-size:0.95rem;max-width:50ch;}
   .proof-list{display:flex;flex-direction:column;}
   .proof-list a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-soft);color:var(--chalk);text-decoration:none;transition:color .2s, padding .25s ease;}
@@ -159,15 +169,17 @@
   .contact-frame{border:1px solid var(--line);padding:min(6vw,64px);display:grid;grid-template-columns:1.1fr 0.9fr;gap:44px;position:relative;}
   .contact h2{font-family:'Space Grotesk','Noto Sans SC',sans-serif;font-weight:600;font-size:clamp(1.5rem,2.8vw,2rem);color:var(--paper);margin-bottom:16px;}
   .contact .intro{color:var(--slate);max-width:44ch;margin-bottom:28px;}
+  html[lang^="en"] .contact .intro{max-width:52ch;}
 
   .composer{display:flex;flex-direction:column;gap:20px;}
-  .field-label{display:block;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;color:var(--slate);margin-bottom:10px;}
+  .field-label{display:block;font-family:'IBM Plex Mono','Noto Sans SC',monospace;font-size:0.7rem;letter-spacing:0.14em;color:var(--slate);margin-bottom:10px;}
+  html[lang^="en"] .field-label{text-transform:uppercase;}
   .composer fieldset{border:none;min-width:0;}
   .composer legend{padding:0;}
   .chips{display:flex;flex-wrap:wrap;gap:8px;}
   .chip{position:relative;}
   .chip input{position:absolute;opacity:0;width:1px;height:1px;}
-  .chip span{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.78rem;padding:7px 13px;border:1px solid var(--line);color:var(--slate);cursor:pointer;transition:border-color .2s, color .2s, background .2s;}
+  .chip span{display:inline-block;font-family:'IBM Plex Mono','Noto Sans SC',monospace;font-size:0.78rem;padding:7px 13px;border:1px solid var(--line);color:var(--slate);cursor:pointer;transition:border-color .2s, color .2s, background .2s;}
   .chip:hover span{color:var(--chalk);border-color:var(--slate);}
   .chip input:checked + span{border-color:var(--amber);color:var(--amber);background:var(--amber-wash);}
   .chip input:focus-visible + span{outline:2px solid var(--amber);outline-offset:2px;}
@@ -175,15 +187,16 @@
   .composer textarea:focus{outline:none;border-color:var(--amber);}
   .composer textarea::placeholder{color:var(--slate-dim);}
   .composer-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-  .composer-actions .hint{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--slate-dim);}
+  .composer-actions .hint{font-family:'IBM Plex Mono','Noto Sans SC',monospace;font-size:0.72rem;color:var(--slate-dim);}
 
   .contact-side{display:flex;flex-direction:column;gap:22px;align-self:start;}
   .contact-list{display:flex;flex-direction:column;gap:14px;}
   .contact-item{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line-soft);font-family:'IBM Plex Mono',monospace;font-size:0.9rem;}
-  .contact-item .k{color:var(--slate);width:52px;flex-shrink:0;font-size:0.72rem;}
+  .contact-item .k{color:var(--slate);width:52px;flex-shrink:0;font-size:0.72rem;font-family:'IBM Plex Mono','Noto Sans SC',monospace;}
+  html[lang^="en"] .contact-item .k{text-transform:uppercase;letter-spacing:0.1em;}
   .contact-item a{flex:1;min-width:0;color:var(--chalk);text-decoration:none;overflow-wrap:anywhere;transition:color .2s;}
   .contact-item a:hover{color:var(--amber);}
-  .copy-btn{flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:0.68rem;background:none;border:1px solid var(--line);color:var(--slate);padding:4px 10px;cursor:pointer;transition:border-color .2s, color .2s;}
+  .copy-btn{flex-shrink:0;font-family:'IBM Plex Mono','Noto Sans SC',monospace;font-size:0.68rem;background:none;border:1px solid var(--line);color:var(--slate);padding:4px 10px;cursor:pointer;transition:border-color .2s, color .2s;}
   .copy-btn:hover{border-color:var(--amber);color:var(--amber);}
   .copy-btn.done{border-color:var(--amber);color:var(--amber);}
   .contact-tip{padding:20px 22px;background:var(--ink-2);border:1px dashed var(--line);}
@@ -193,16 +206,16 @@
   .contact-tip li::before{content:"—";color:var(--amber);font-family:'IBM Plex Mono',monospace;flex-shrink:0;}
 
   /* ---------- footer ---------- */
-  footer{padding:30px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;border-top:1px solid var(--line-soft);font-family:'IBM Plex Mono',monospace;font-size:0.74rem;color:var(--slate);position:relative;z-index:1;}
+  footer{padding:30px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;border-top:1px solid var(--line-soft);font-family:'IBM Plex Mono','Noto Sans SC',monospace;font-size:0.74rem;color:var(--slate);position:relative;z-index:1;}
   .foot-links{display:flex;gap:22px;flex-wrap:wrap;}
   footer a{color:var(--slate);text-decoration:none;transition:color .2s;}
   footer a:hover{color:var(--amber);}
 
-  .toast{position:fixed;left:50%;bottom:28px;z-index:100;transform:translate(-50%,16px);opacity:0;pointer-events:none;background:var(--paper);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;padding:10px 18px;border-left:3px solid var(--amber);transition:opacity .25s ease, transform .25s ease;}
+  .toast{position:fixed;left:50%;bottom:28px;z-index:100;transform:translate(-50%,16px);opacity:0;pointer-events:none;max-width:calc(100vw - 32px);background:var(--paper);color:var(--ink);font-family:'IBM Plex Mono','Noto Sans SC',monospace;font-size:0.8rem;padding:10px 18px;border-left:3px solid var(--amber);transition:opacity .25s ease, transform .25s ease;}
   .toast.show{opacity:1;transform:translate(-50%,0);}
 
   /* ---------- responsive ---------- */
-  @media (max-width:860px){
+  @media (max-width:960px){
     .menu-btn{display:inline-flex;}
     .header-right{gap:12px;}
     nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;padding:6px 6vw 14px;background:rgba(15,32,56,0.97);border-bottom:1px solid var(--line-soft);}
@@ -211,6 +224,8 @@
     nav a:last-child{border-bottom:none;}
     nav a::after{display:none;}
     nav a.active{color:var(--amber);}
+  }
+  @media (max-width:860px){
     .service{grid-template-columns:36px 1fr;gap:10px 18px;}
     .service > div:last-child{grid-column:2;}
     .proof-panel{grid-template-columns:1fr;}
@@ -225,6 +240,9 @@
     .steps{grid-template-columns:1fr;}
     .hero-actions .btn{flex:1 1 auto;justify-content:center;}
   }
+  @media (max-width:420px){
+    .nav-cta{display:none;}
+  }
 
   .js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease;transition-delay:var(--d,0s);}
   .js .reveal.in{opacity:1;transform:translateY(0);}
@@ -232,7 +250,7 @@
     html{scroll-behavior:auto;}
     *,*::before,*::after{transition:none !important;animation:none !important;}
     .js .reveal{opacity:1;transform:none;}
-    .hero h1 .accent::after{transform:scaleX(1);}
+    .hero h1 .accent{background-size:100% 2px;}
   }
   @media print{
     .grid-bg,header,.toast,.composer,.hero-actions{display:none !important;}
@@ -243,20 +261,23 @@
 </head>
 <body>
 
-<a class="skip" href="#main">跳到正文</a>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 <div class="grid-bg" aria-hidden="true"></div>
 
 <header>
-  <a class="logo" href="#top" aria-label="格物 Studio · 回到顶部"><span class="mark" aria-hidden="true"></span>格物 Studio</a>
+  <a class="logo" href="#top" data-i18n-attr="aria-label:logo_aria" aria-label="Gewu Studio · back to top"><span class="mark" aria-hidden="true"></span><span data-i18n="brand">Gewu Studio</span></a>
   <div class="header-right">
-    <nav id="site-nav" aria-label="主导航">
-      <a href="#services">服务</a>
-      <a href="#proof">作品与笔记</a>
-      <a href="#process">流程</a>
-      <a href="#contact">联系</a>
+    <nav id="site-nav" data-i18n-attr="aria-label:nav_aria" aria-label="Main navigation">
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#proof" data-i18n="nav_proof">Work &amp; Notes</a>
+      <a href="#process" data-i18n="nav_process">Process</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="mailto:ethanxu643@gmail.com?subject=%5B%E6%A0%BC%E7%89%A9%20Studio%5D%20%E9%A1%B9%E7%9B%AE%E5%92%A8%E8%AF%A2">写邮件</a>
-    <button class="menu-btn" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <div class="header-tools">
+      <button class="lang-btn" type="button" aria-label="切换到中文" title="切换到中文"><span data-l="en">EN</span><span class="sep">/</span><span data-l="zh">中</span></button>
+      <a class="nav-cta" id="nav-cta" href="mailto:ethanxu643@gmail.com?subject=%5BGewu%20Studio%5D%20Project%20enquiry" data-i18n="nav_cta">Email me</a>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    </div>
   </div>
   <div class="progress" aria-hidden="true"></div>
 </header>
@@ -267,16 +288,16 @@
   <div class="hero-frame reveal in">
     <span class="frame-label" aria-hidden="true">格物致知 / GEWU</span>
     <div class="eyebrow">GEWU STUDIO — INDEPENDENT DEVELOPER<span class="caret" aria-hidden="true"></span></div>
-    <h1>写代码、建网站，<br>顺便把过程<span class="accent">写清楚</span>。</h1>
-    <p class="lede">格物 Studio 是独立开发者 <strong>Yang</strong> 的个人接单页——提供<strong>网站开发</strong>、<strong>小工具 / 脚本编程</strong>，以及<strong>技术类文档写作</strong>服务。按项目合作，一个人对接到底。</p>
+    <h1 data-i18n="hero_title">Writing code, building websites —<br>and <span class="accent">documenting it properly</span>.</h1>
+    <p class="lede" data-i18n="hero_lede">Gewu Studio is the freelance page of independent developer <strong>Yang</strong>, offering <strong>website development</strong>, <strong>scripts and small tools</strong>, and <strong>technical writing</strong>. Work is taken on project by project, with one person looking after it from start to finish.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn">聊聊你的项目 <span class="arr" aria-hidden="true">→</span></a>
-      <a href="#proof" class="btn ghost">看看我平时写的东西</a>
+      <a href="#contact" class="btn"><span data-i18n="hero_cta">Tell me about your project</span> <span class="arr" aria-hidden="true">→</span></a>
+      <a href="#proof" class="btn ghost" data-i18n="hero_cta2">See what I’ve been writing</a>
     </div>
-    <ul class="hero-meta" aria-label="合作特点">
-      <li>按项目合作</li>
-      <li>一人对接到底</li>
-      <li>交付可运行的成果</li>
+    <ul class="hero-meta" data-i18n-attr="aria-label:meta_aria" aria-label="How I work">
+      <li data-i18n="meta_1">Project-based</li>
+      <li data-i18n="meta_2">One point of contact throughout</li>
+      <li data-i18n="meta_3">Delivered ready to run</li>
     </ul>
   </div>
 </section>
@@ -284,35 +305,35 @@
 <section class="services" id="services" aria-labelledby="services-title">
   <div class="section-head reveal">
     <div class="eyebrow">SERVICES</div>
-    <h2 id="services-title">能接的活儿</h2>
-    <p>三类服务，范围明确；能做的认真做好，做不了的提前说清楚。</p>
+    <h2 id="services-title" data-i18n="services_title">What I can take on</h2>
+    <p data-i18n="services_lede">Three clearly scoped services. What I can do, I’ll do properly; what I can’t, I’ll tell you up front.</p>
   </div>
   <div class="service-list">
     <article class="service reveal">
       <div class="num">01</div>
-      <div><h3>网站开发</h3><div class="en">WEB DEVELOPMENT</div></div>
+      <div><h3 data-i18n="s1_title">Website development</h3><div class="sub" data-i18n="s1_sub">网站开发</div></div>
       <div>
-        <p>个人主页、小型企业官网、作品展示页——从静态页面到简单的前后端联动，交付可以直接部署的代码。</p>
-        <div class="tags"><span>响应式网页</span><span>静态站点</span><span>域名部署</span></div>
-        <div class="deliver"><b>交付</b>可直接部署的源码 + 部署说明</div>
+        <p data-i18n="s1_body">Personal homepages, small business websites and portfolio pages — from static sites to straightforward front-end/back-end integration, delivered as code that’s ready to deploy.</p>
+        <div class="tags"><span data-i18n="s1_t1">Responsive design</span><span data-i18n="s1_t2">Static sites</span><span data-i18n="s1_t3">Domains &amp; deployment</span></div>
+        <div class="deliver"><b data-i18n="deliver">YOU GET</b><span data-i18n="s1_deliver">Deployable source code + deployment notes</span></div>
       </div>
     </article>
     <article class="service reveal">
       <div class="num">02</div>
-      <div><h3>脚本 / 小工具开发</h3><div class="en">SCRIPTS &amp; TOOLS</div></div>
+      <div><h3 data-i18n="s2_title">Scripts &amp; small tools</h3><div class="sub" data-i18n="s2_sub">脚本 / 小工具开发</div></div>
       <div>
-        <p>数据处理脚本、自动化小工具、日常重复劳动的脚本化——把明确的需求写成能跑起来的东西。</p>
-        <div class="tags"><span>Python</span><span>自动化脚本</span><span>数据处理</span></div>
-        <div class="deliver"><b>交付</b>能直接运行的脚本 + 使用说明</div>
+        <p data-i18n="s2_body">Data-processing scripts, small automation tools, and scripting away the repetitive bits of everyday work — turning a clear brief into something that actually runs.</p>
+        <div class="tags"><span>Python</span><span data-i18n="s2_t2">Automation</span><span data-i18n="s2_t3">Data processing</span></div>
+        <div class="deliver"><b data-i18n="deliver">YOU GET</b><span data-i18n="s2_deliver">Ready-to-run scripts + usage notes</span></div>
       </div>
     </article>
     <article class="service reveal">
       <div class="num">03</div>
-      <div><h3>技术文档 / 说明写作</h3><div class="en">TECHNICAL WRITING</div></div>
+      <div><h3 data-i18n="s3_title">Technical writing &amp; documentation</h3><div class="sub" data-i18n="s3_sub">技术文档 / 说明写作</div></div>
       <div>
-        <p>把复杂的技术流程写成能看懂的文档——使用说明、接入指南、内部知识整理，用词准确、结构清楚。</p>
-        <div class="tags"><span>技术文档</span><span>使用说明</span><span>知识整理</span></div>
-        <div class="deliver"><b>交付</b>结构清晰的成稿（Markdown / Word 等格式）</div>
+        <p data-i18n="s3_body">Turning complex technical processes into documents people can actually follow — user guides, integration guides and internal knowledge bases, with precise wording and a clear structure.</p>
+        <div class="tags"><span data-i18n="s3_t1">Technical docs</span><span data-i18n="s3_t2">User guides</span><span data-i18n="s3_t3">Knowledge organisation</span></div>
+        <div class="deliver"><b data-i18n="deliver">YOU GET</b><span data-i18n="s3_deliver">A well-structured final draft (Markdown, Word or similar)</span></div>
       </div>
     </article>
   </div>
@@ -322,16 +343,16 @@
   <div class="proof-panel reveal">
     <div>
       <div class="eyebrow">PROOF OF WORK</div>
-      <h3 id="proof-title">不写空话，直接看我平时在做什么</h3>
-      <p>比起罗列“多年经验”，不如直接看我自己维护的主站和笔记——这是我折腾代码、记录学习过程的地方，更新一直在继续。</p>
+      <h3 id="proof-title" data-i18n="proof_title">No empty claims — just see what I’m actually working on</h3>
+      <p data-i18n="proof_body">Rather than listing “years of experience”, have a look at the site and notes I maintain myself. It’s where I tinker with code and keep a record of what I’m learning — and it’s still being updated.</p>
     </div>
     <div class="proof-list">
       <a href="https://yang181969.com" target="_blank" rel="noopener noreferrer">
-        <span><span class="t">yang181969.com</span><span class="d">个人主站</span></span>
+        <span><span class="t">yang181969.com</span><span class="d" data-i18n="proof_1d">Personal site</span></span>
         <span class="arrow" aria-hidden="true">↗</span>
       </a>
       <a href="https://yang181969.com/index.html#笔记" target="_blank" rel="noopener noreferrer">
-        <span><span class="t">编程 / 数学 / 物理笔记</span><span class="d">持续更新的学习记录</span></span>
+        <span><span class="t" data-i18n="proof_2t">Programming / Maths / Physics notes</span><span class="d" data-i18n="proof_2d">An ongoing learning log</span></span>
         <span class="arrow" aria-hidden="true">↗</span>
       </a>
     </div>
@@ -341,42 +362,42 @@
 <section class="process" id="process" aria-labelledby="process-title">
   <div class="section-head reveal">
     <div class="eyebrow">PROCESS</div>
-    <h2 id="process-title">合作方式</h2>
-    <p>四步走完，每一步确认过再往下。</p>
+    <h2 id="process-title" data-i18n="process_title">How we’ll work together</h2>
+    <p data-i18n="process_lede">Four steps, each one agreed before moving on to the next.</p>
   </div>
   <ol class="steps">
-    <li class="step reveal"><span class="n">STEP 01</span><h3>说清楚需求</h3><p>你描述想要什么，我确认范围、时间和大致报价。</p></li>
-    <li class="step reveal" style="--d:.08s"><span class="n">STEP 02</span><h3>出方案</h3><p>给出简单的实现思路或页面结构草图，确认后再开工。</p></li>
-    <li class="step reveal" style="--d:.16s"><span class="n">STEP 03</span><h3>开发</h3><p>过程中同步进度，中途可以提修改意见。</p></li>
-    <li class="step reveal" style="--d:.24s"><span class="n">STEP 04</span><h3>交付</h3><p>提供可运行的代码 / 可部署的文件，附简单说明。</p></li>
+    <li class="step reveal"><span class="n">STEP 01</span><h3 data-i18n="p1_t">Clarify the brief</h3><p data-i18n="p1_b">You tell me what you’re after; I confirm the scope, timeline and a rough quote.</p></li>
+    <li class="step reveal" style="--d:.08s"><span class="n">STEP 02</span><h3 data-i18n="p2_t">Agree a plan</h3><p data-i18n="p2_b">I share a simple outline of the approach or a sketch of the page structure, and start once you’re happy with it.</p></li>
+    <li class="step reveal" style="--d:.16s"><span class="n">STEP 03</span><h3 data-i18n="p3_t">Build</h3><p data-i18n="p3_b">You get progress updates along the way and can suggest changes at any point.</p></li>
+    <li class="step reveal" style="--d:.24s"><span class="n">STEP 04</span><h3 data-i18n="p4_t">Deliver</h3><p data-i18n="p4_b">Working code or deployable files, with brief notes on how to use them.</p></li>
   </ol>
-  <p class="process-note reveal"><b>NOTE</b>沟通以邮件为主——需求、报价和修改意见都留有记录，随时可以回看。</p>
+  <p class="process-note reveal"><b>NOTE</b><span data-i18n="process_note">Communication is mainly by email, so the brief, the quote and any revisions are all on record and easy to look back on.</span></p>
 </section>
 
 <section class="contact" id="contact" aria-labelledby="contact-title">
   <div class="contact-frame reveal">
     <div>
       <div class="eyebrow">CONTACT</div>
-      <h2 id="contact-title">说说你想做的项目</h2>
-      <p class="intro">不管需求是不是想得很清楚，先聊聊，能做的、不能做的我会直接告诉你。</p>
+      <h2 id="contact-title" data-i18n="contact_title">Tell me about your project</h2>
+      <p class="intro" data-i18n="contact_intro">Whether or not you’ve fully worked out what you need, let’s talk. I’ll tell you straight what I can and can’t do.</p>
 
       <form class="composer" id="composer" action="mailto:ethanxu643@gmail.com" method="get" enctype="text/plain">
         <fieldset>
-          <legend class="field-label">项目类型</legend>
+          <legend class="field-label" data-i18n="f_type">Project type</legend>
           <div class="chips">
-            <label class="chip"><input type="radio" name="type" value="网站开发" checked><span>网站开发</span></label>
-            <label class="chip"><input type="radio" name="type" value="脚本 / 小工具"><span>脚本 / 小工具</span></label>
-            <label class="chip"><input type="radio" name="type" value="技术文档"><span>技术文档</span></label>
-            <label class="chip"><input type="radio" name="type" value="还没想好"><span>还没想好</span></label>
+            <label class="chip"><input type="radio" name="type" value="web" checked><span data-i18n="c_web">Website</span></label>
+            <label class="chip"><input type="radio" name="type" value="tool"><span data-i18n="c_tool">Script / tool</span></label>
+            <label class="chip"><input type="radio" name="type" value="doc"><span data-i18n="c_doc">Documentation</span></label>
+            <label class="chip"><input type="radio" name="type" value="unsure"><span data-i18n="c_unsure">Not sure yet</span></label>
           </div>
         </fieldset>
         <div>
-          <label class="field-label" for="brief">简单描述（可选）</label>
-          <textarea id="brief" name="body" rows="4" placeholder="比如：想做一个展示作品的个人主页，大概 4–5 个页面，希望下个月上线……"></textarea>
+          <label class="field-label" for="brief" data-i18n="f_brief">Brief description (optional)</label>
+          <textarea id="brief" name="body" rows="4" data-i18n-attr="placeholder:f_brief_ph" placeholder="e.g. A personal portfolio site, around 4–5 pages, ideally live by next month…"></textarea>
         </div>
         <div class="composer-actions">
-          <button class="btn" type="submit">发送项目介绍 <span class="arr" aria-hidden="true">→</span></button>
-          <span class="hint">将用你的邮件客户端打开</span>
+          <button class="btn" type="submit"><span data-i18n="f_send">Send project details</span> <span class="arr" aria-hidden="true">→</span></button>
+          <span class="hint" data-i18n="f_hint">Opens in your email app</span>
         </div>
       </form>
     </div>
@@ -384,22 +405,22 @@
     <div class="contact-side">
       <div class="contact-list">
         <div class="contact-item">
-          <span class="k">邮箱</span>
+          <span class="k" data-i18n="k_email">Email</span>
           <a href="mailto:ethanxu643@gmail.com">ethanxu643@gmail.com</a>
-          <button class="copy-btn" type="button" data-copy="ethanxu643@gmail.com" aria-label="复制邮箱地址">复制</button>
+          <button class="copy-btn" type="button" data-copy="ethanxu643@gmail.com" data-i18n="copy" data-i18n-attr="aria-label:copy_aria" aria-label="Copy email address">Copy</button>
         </div>
         <div class="contact-item">
-          <span class="k">主站</span>
+          <span class="k" data-i18n="k_site">Site</span>
           <a href="https://yang181969.com" target="_blank" rel="noopener noreferrer">yang181969.com ↗</a>
         </div>
       </div>
       <div class="contact-tip">
-        <span class="field-label">写信时可以附上</span>
+        <span class="field-label" data-i18n="tip_title">Worth including in your email</span>
         <ul>
-          <li>想做什么、给谁用</li>
-          <li>参考的网站或示例（如果有）</li>
-          <li>期望的完成时间</li>
-          <li>预算范围（可选）</li>
+          <li data-i18n="tip_1">What it’s for and who will use it</li>
+          <li data-i18n="tip_2">Reference sites or examples (if any)</li>
+          <li data-i18n="tip_3">When you’d like it finished</li>
+          <li data-i18n="tip_4">Budget range (optional)</li>
         </ul>
       </div>
     </div>
@@ -409,11 +430,11 @@
 </main>
 
 <footer>
-  <div>© <span id="year">2026</span> 格物 Studio · Yang</div>
+  <div>© <span id="year">2026</span> <span data-i18n="brand">Gewu Studio</span> · Yang</div>
   <div class="foot-links">
     <a href="mailto:ethanxu643@gmail.com">ethanxu643@gmail.com</a>
     <a href="https://yang181969.com" target="_blank" rel="noopener noreferrer">yang181969.com</a>
-    <a href="#top">回到顶部 ↑</a>
+    <a href="#top" data-i18n="to_top">Back to top ↑</a>
   </div>
 </footer>
 
@@ -422,10 +443,172 @@
 <script>
 (function(){
   const EMAIL = 'ethanxu643@gmail.com';
+  const STORE_KEY = 'gewu-lang';
+
+  /* ---------- i18n ---------- */
+  // 英文写在 HTML 里（默认）；中文在这里。页面加载时自动从 HTML 采集英文。
+  const ZH = {
+    page_title: '格物 Studio — 编程接单 · 建站 · 技术写作',
+    page_desc: '格物 Studio：独立开发者 Yang 的个人接单页，提供网站开发、脚本 / 小工具编程与技术文档写作服务。按项目合作，一人对接到底。',
+    skip: '跳到正文',
+    brand: '格物 Studio',
+    logo_aria: '格物 Studio · 回到顶部',
+    nav_aria: '主导航',
+    nav_services: '服务',
+    nav_proof: '作品与笔记',
+    nav_process: '流程',
+    nav_contact: '联系',
+    nav_cta: '写邮件',
+    hero_title: '写代码、建网站，<br>顺便把过程<span class="accent">写清楚</span>。',
+    hero_lede: '格物 Studio 是独立开发者 <strong>Yang</strong> 的个人接单页——提供<strong>网站开发</strong>、<strong>小工具 / 脚本编程</strong>，以及<strong>技术类文档写作</strong>服务。按项目合作，一个人对接到底。',
+    hero_cta: '聊聊你的项目',
+    hero_cta2: '看看我平时写的东西',
+    meta_aria: '合作特点',
+    meta_1: '按项目合作',
+    meta_2: '一人对接到底',
+    meta_3: '交付可运行的成果',
+    services_title: '能接的活儿',
+    services_lede: '三类服务，范围明确；能做的认真做好，做不了的提前说清楚。',
+    s1_title: '网站开发',
+    s1_sub: 'WEB DEVELOPMENT',
+    s1_body: '个人主页、小型企业官网、作品展示页——从静态页面到简单的前后端联动，交付可以直接部署的代码。',
+    s1_t1: '响应式网页', s1_t2: '静态站点', s1_t3: '域名部署',
+    s1_deliver: '可直接部署的源码 + 部署说明',
+    deliver: '交付',
+    s2_title: '脚本 / 小工具开发',
+    s2_sub: 'SCRIPTS &amp; TOOLS',
+    s2_body: '数据处理脚本、自动化小工具、日常重复劳动的脚本化——把明确的需求写成能跑起来的东西。',
+    s2_t2: '自动化脚本', s2_t3: '数据处理',
+    s2_deliver: '能直接运行的脚本 + 使用说明',
+    s3_title: '技术文档 / 说明写作',
+    s3_sub: 'TECHNICAL WRITING',
+    s3_body: '把复杂的技术流程写成能看懂的文档——使用说明、接入指南、内部知识整理，用词准确、结构清楚。',
+    s3_t1: '技术文档', s3_t2: '使用说明', s3_t3: '知识整理',
+    s3_deliver: '结构清晰的成稿（Markdown / Word 等格式）',
+    proof_title: '不写空话，直接看我平时在做什么',
+    proof_body: '比起罗列“多年经验”，不如直接看我自己维护的主站和笔记——这是我折腾代码、记录学习过程的地方，更新一直在继续。',
+    proof_1d: '个人主站',
+    proof_2t: '编程 / 数学 / 物理笔记',
+    proof_2d: '持续更新的学习记录',
+    process_title: '合作方式',
+    process_lede: '四步走完，每一步确认过再往下。',
+    p1_t: '说清楚需求', p1_b: '你描述想要什么，我确认范围、时间和大致报价。',
+    p2_t: '出方案', p2_b: '给出简单的实现思路或页面结构草图，确认后再开工。',
+    p3_t: '开发', p3_b: '过程中同步进度，中途可以提修改意见。',
+    p4_t: '交付', p4_b: '提供可运行的代码 / 可部署的文件，附简单说明。',
+    process_note: '沟通以邮件为主——需求、报价和修改意见都留有记录，随时可以回看。',
+    contact_title: '说说你想做的项目',
+    contact_intro: '不管需求是不是想得很清楚，先聊聊，能做的、不能做的我会直接告诉你。',
+    f_type: '项目类型',
+    c_web: '网站开发', c_tool: '脚本 / 小工具', c_doc: '技术文档', c_unsure: '还没想好',
+    f_brief: '简单描述（可选）',
+    f_brief_ph: '比如：想做一个展示作品的个人主页，大概 4–5 个页面，希望下个月上线……',
+    f_send: '发送项目介绍',
+    f_hint: '将用你的邮件客户端打开',
+    k_email: '邮箱',
+    k_site: '主站',
+    copy: '复制',
+    copy_aria: '复制邮箱地址',
+    tip_title: '写信时可以附上',
+    tip_1: '想做什么、给谁用',
+    tip_2: '参考的网站或示例（如果有）',
+    tip_3: '期望的完成时间',
+    tip_4: '预算范围（可选）',
+    to_top: '回到顶部 ↑'
+  };
+
+  // 只在脚本里用到的文案
+  const UI = {
+    en: {
+      copied: 'Copied',
+      toast_copied: 'Email copied: ',
+      toast_copy_fail: 'Couldn’t copy — please copy it manually: ',
+      toast_mail: 'Opening your email app…',
+      menu_open: 'Open menu', menu_close: 'Close menu',
+      switch_to: '切换到中文',
+      cta_subject: '[Gewu Studio] Project enquiry',
+      mail: (type, brief) => ({
+        subject: '[Gewu Studio] Project enquiry · ' + type,
+        body: [
+          'Hi Yang,', '',
+          'Project type: ' + type,
+          'Description: ' + brief, '',
+          'Reference sites / examples:',
+          'Preferred timeline:',
+          'Budget range (optional):', '',
+          '— Sent from the Gewu Studio page'
+        ].join('\n')
+      })
+    },
+    zh: {
+      copied: '已复制',
+      toast_copied: '邮箱已复制：',
+      toast_copy_fail: '复制失败，请手动复制：',
+      toast_mail: '正在打开邮件客户端…',
+      menu_open: '打开菜单', menu_close: '关闭菜单',
+      switch_to: 'Switch to English',
+      cta_subject: '[格物 Studio] 项目咨询',
+      mail: (type, brief) => ({
+        subject: '[格物 Studio] 项目咨询 · ' + type,
+        body: [
+          '你好 Yang，', '',
+          '项目类型：' + type,
+          '项目描述：' + brief, '',
+          '参考网站 / 示例：',
+          '期望完成时间：',
+          '预算范围（可选）：', '',
+          '—— 来自 格物 Studio 页面'
+        ].join('\n')
+      })
+    }
+  };
+
+  // 从 HTML 采集英文原文
+  const metaDesc = document.querySelector('meta[name="description"]');
+  const EN = { page_title: document.title, page_desc: metaDesc.content };
+  const textEls = document.querySelectorAll('[data-i18n]');
+  textEls.forEach(el => { EN[el.dataset.i18n] = el.innerHTML; });
+  const attrEls = document.querySelectorAll('[data-i18n-attr]');
+  const parseAttrs = el => el.dataset.i18nAttr.split(';').map(p => p.split(':'));
+  attrEls.forEach(el => parseAttrs(el).forEach(([attr, key]) => { EN[key] = el.getAttribute(attr); }));
+  const DICT = { en: EN, zh: ZH };
+
+  let lang = 'en';
+  const t = key => UI[lang][key];
+  const langBtn = document.querySelector('.lang-btn');
+  const menuBtn = document.querySelector('.menu-btn');
+  const nav = document.getElementById('site-nav');
+  const navCta = document.getElementById('nav-cta');
+
+  const applyLang = next => {
+    lang = next === 'zh' ? 'zh' : 'en';
+    const d = DICT[lang];
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en-GB';
+    document.title = d.page_title;
+    metaDesc.content = d.page_desc;
+    textEls.forEach(el => { const v = d[el.dataset.i18n]; if (v != null) el.innerHTML = v; });
+    attrEls.forEach(el => parseAttrs(el).forEach(([attr, key]) => { if (d[key] != null) el.setAttribute(attr, d[key]); }));
+    langBtn.setAttribute('aria-label', t('switch_to'));
+    langBtn.title = t('switch_to');
+    menuBtn.setAttribute('aria-label', nav.classList.contains('open') ? t('menu_close') : t('menu_open'));
+    navCta.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(t('cta_subject'));
+  };
+
+  // 默认英文；支持 ?lang=zh 链接，并记住访客的选择
+  let initial = 'en';
+  const qs = new URLSearchParams(location.search).get('lang');
+  if (qs === 'zh' || qs === 'en') initial = qs;
+  else { try { initial = localStorage.getItem(STORE_KEY) || 'en'; } catch (e) {} }
+  if (initial !== 'en') applyLang(initial);
+
+  langBtn.addEventListener('click', () => {
+    applyLang(lang === 'en' ? 'zh' : 'en');
+    try { localStorage.setItem(STORE_KEY, lang); } catch (e) {}
+  });
+
+  /* ---------- header: shrink + reading progress ---------- */
   const header = document.querySelector('header');
   const bar = document.querySelector('.progress');
-
-  // 顶栏收缩 + 阅读进度
   let ticking = false;
   const onScroll = () => {
     const y = window.scrollY;
@@ -437,7 +620,7 @@
   window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();
 
-  // 滚动渐显
+  /* ---------- reveal on scroll ---------- */
   const els = document.querySelectorAll('.reveal:not(.in)');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => {
@@ -448,8 +631,8 @@
     els.forEach(el => el.classList.add('in'));
   }
 
-  // 导航高亮当前区块
-  const links = Array.from(document.querySelectorAll('nav a'));
+  /* ---------- active section in nav ---------- */
+  const links = Array.from(nav.querySelectorAll('a'));
   if ('IntersectionObserver' in window) {
     const spy = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -460,20 +643,18 @@
     document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
   }
 
-  // 移动端菜单
-  const menuBtn = document.querySelector('.menu-btn');
-  const nav = document.getElementById('site-nav');
+  /* ---------- mobile menu ---------- */
   const setMenu = open => {
     nav.classList.toggle('open', open);
     menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+    menuBtn.setAttribute('aria-label', open ? t('menu_close') : t('menu_open'));
   };
   menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
   links.forEach(a => a.addEventListener('click', () => setMenu(false)));
   document.addEventListener('click', e => { if (nav.classList.contains('open') && !header.contains(e.target)) setMenu(false); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
 
-  // 提示
+  /* ---------- toast ---------- */
   const toast = document.querySelector('.toast');
   let toastTimer;
   const showToast = msg => {
@@ -483,7 +664,7 @@
     toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
   };
 
-  // 复制邮箱
+  /* ---------- copy email ---------- */
   const copyText = text => {
     if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
     return new Promise((resolve, reject) => {
@@ -495,36 +676,27 @@
     });
   };
   document.querySelectorAll('.copy-btn').forEach(btn => {
+    let resetTimer;
     btn.addEventListener('click', () => {
       copyText(btn.dataset.copy).then(() => {
-        btn.textContent = '已复制'; btn.classList.add('done');
-        showToast('邮箱已复制：' + btn.dataset.copy);
-        setTimeout(() => { btn.textContent = '复制'; btn.classList.remove('done'); }, 2000);
-      }).catch(() => showToast('复制失败，请手动复制：' + btn.dataset.copy));
+        btn.textContent = t('copied'); btn.classList.add('done');
+        showToast(t('toast_copied') + btn.dataset.copy);
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => { btn.innerHTML = DICT[lang].copy; btn.classList.remove('done'); }, 2000);
+      }).catch(() => showToast(t('toast_copy_fail') + btn.dataset.copy));
     });
   });
 
-  // 项目介绍 → 预填邮件
+  /* ---------- project brief → pre-filled email ---------- */
   const form = document.getElementById('composer');
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const type = (form.querySelector('input[name="type"]:checked') || {}).value || '项目咨询';
+    const checked = form.querySelector('input[name="type"]:checked');
+    const type = checked ? checked.nextElementSibling.textContent.trim() : '';
     const brief = form.querySelector('#brief').value.trim();
-    const subject = '[格物 Studio] 项目咨询 · ' + type;
-    const body = [
-      '你好 Yang，',
-      '',
-      '项目类型：' + type,
-      '项目描述：' + (brief || ''),
-      '',
-      '参考网站 / 示例：',
-      '期望完成时间：',
-      '预算范围（可选）：',
-      '',
-      '—— 来自 格物 Studio 页面'
-    ].join('\n');
-    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    showToast('正在打开邮件客户端…');
+    const mail = UI[lang].mail(type, brief);
+    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(mail.subject) + '&body=' + encodeURIComponent(mail.body);
+    showToast(t('toast_mail'));
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
